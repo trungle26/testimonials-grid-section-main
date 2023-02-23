@@ -1,0 +1,139 @@
+html{
+    box-sizing: border-box;
+    margin:0px;
+    padding: 0px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 500;
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+.left-side,.right-side{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.daniel, .jonathan, .jeanette, .patrick, .kira{
+    height: auto;
+    width: 300px;
+    margin-top: 20px;
+    border-radius: 3%;
+    overflow:hidden;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+p:not(.info p), h2:not(.info h2){
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 0px;
+}
+p:not(.info p){
+    opacity: 70%;
+}
+
+
+.info{
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-left: 5%;
+    margin-top: 20px;
+    position: relative;
+}
+#quotation{
+    background-image: url("./images/bg-pattern-quotation.svg");
+    width: 104px;
+    height: 102px;
+    position: absolute;
+    right: 0%;
+    top: -20px;
+    z-index: 0;
+}
+.daniel h2{
+    position: relative;
+    z-index: 1;
+}
+.info p{
+    margin-left: 20px;
+}
+.info a{
+    font-size: 0.8rem;
+    opacity: 50%;
+}
+.info img{
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    align-self: center;
+}
+
+.daniel{
+    background-color: hsl(263, 55%, 52%);
+    color: white;
+}
+.jonathan{
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+}
+.jeanette{
+    color: hsl(217, 19%, 35%);
+}
+.patrick{
+    background-color: hsl(219, 29%, 14%);
+    color: white;
+}
+.kira{
+    color:hsl(217, 19%, 35%);
+}
+
+
+@media (min-width: 700px){
+    body{
+        display:flex;
+        flex-direction: row;
+        width: 100%;
+        max-width: 1440px;
+        height: 1024px;
+        justify-content: space-between;
+    }
+    .left-side{
+        flex-basis: 75%;
+    }
+    .right-side{
+        flex-basis: 20%;
+    }
+    .daniel, .jonathan, .jeanette, .patrick, .kira{
+        width:100%;
+    }
+    .upper-group{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 20px;;
+    }
+    .daniel{
+        flex-basis:65%;
+    }
+    .jonathan{
+        flex-basis:32%;
+    }
+
+    .below-group{
+        align-self: flex-start;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .jeanette{
+        flex-basis: 27%;
+    }
+    .patrick{
+        flex-basis: 70%;
+    }
+    
+}
